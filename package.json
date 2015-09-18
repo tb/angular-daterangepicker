@@ -1,8 +1,8 @@
 {
   "name": "tb-angular-daterangepicker",
   "description": "AngularJS directive for bootstrap-daterangepicker",
-  "version": "0.1.1",
-  "filename": "./src/angular-daterangepicker.js",
+  "version": "0.1.2",
+  "filename": "./angular-daterangepicker.js",
   "homepage": "http://github.com/tb/angular-daterangepicker",
   "repository": {
     "type": "git",

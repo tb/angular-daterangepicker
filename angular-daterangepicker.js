@@ -1,6 +1,5 @@
 /**
- * @license angular-daterangepicker v0.1.1
- * License: MIT
+ * @license angular-daterangepicker v0.1.2
  */
 (function (angular) {
 	'use strict';

@@ -26,8 +26,8 @@ module.exports = function(grunt) {
             'bower_components/bootstrap/dist/js/bootstrap.js',
             'bower_components/moment/min/moment.min.js',
             'bower_components/bootstrap-daterangepicker/daterangepicker.js',
-            'src/angular-daterangepicker.js',
-            'test/**/*.js'
+            'angular-daterangepicker.js',
+            '*.spec.js'
           ]
         }
       }
