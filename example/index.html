@@ -2,36 +2,34 @@
 <html>
 	<head>
 
-		<title>ng-bootstrap-daterangepicker</title>
+		<title>daterangepicker</title>
 
 		<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css">
 
 	</head>
 	<body>
-
 		<br />
 
-		<div ng-app="ngBootstrap" ng-controller="SampleCtrl" class="container">
-
+		<div ng-app="daterangepicker" ng-controller="SampleCtrl" class="container">
 			<div>
-				<pre>&lt;input type="daterange" ng-model="dates1"> <span>{{</span>dates1|json}}</pre>
-				<input type="daterange" ng-model="dates1"> <code>{{dates1|json}}</code>
+				<pre>&lt;input type="text" date-range-picker single-date-picker="true" ng-model="date"> <span>{{</span>date|json}}</pre>
+				<input type="text" date-range-picker="{singleDatePicker: true}" ng-model="date"> <code>{{date|json}}</code>
 			</div>
 			<hr>
 			<div>
-				<pre>&lt;input type="daterange" ng-model="dates2" format="MMM DD" separator="/"> <span>{{</span>dates2|json}}</pre>
-				<input type="daterange" ng-model="dates2" format="MMM DD" separator="/"> <code>{{dates2|json}}</code>
+				<pre>&lt;input type="text" date-range-picker ng-model="dates1"> <span>{{</span>dates1|json}}</pre>
+				<input type="text" date-range-picker ng-model="dates1"> <code>{{dates1|json}}</code>
 			</div>
 			<hr>
 			<div>
-				<pre>&lt;input type="daterange" ng-model="dates3" separator="/" min-date="2013-09-10" max-date="2013-09-20" limit="1 day"> <span>{{</span>dates3|json}}</pre>
-				<input type="daterange" ng-model="dates3" separator="/" min-date="2013-09-10" max-date="2013-09-20" limit="1 day" > <code>{{dates3|json}}</code>
+				<pre>&lt;input type="text" date-range-picker ng-model="dates2" format="MMM DD" separator="/"> <span>{{</span>dates2|json}}</pre>
+				<input type="text" date-range-picker="{format:'MMM DD', separator: '/'}" ng-model="dates2"> <code>{{dates2|json}}</code>
 			</div>
 			<hr>
 			<div>
-				<pre>&lt;input type="daterange" ng-model="dates4" ranges="ranges"> <span>{{</span>dates4|json}}</pre>
-				<input type="daterange" ng-model="dates4" ranges="ranges"> <code>{{dates4|json}}</code>
+				<pre>&lt;input type="text" date-range-picker ng-model="dates4" ranges="ranges"> <span>{{</span>dates4|json}}</pre>
+				<input type="text" date-range-picker="{ranges: ranges}" ng-model="dates4"> <code>{{dates4|json}}</code>
 			</div>
 
 		</div>
@@ -42,14 +40,14 @@
 		<script src="../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 		<script src="../bower_components/angular/angular.js"></script>
 
-		<script src="../src/ng-bs-daterangepicker.js"></script>
+		<script src="../src/angular-daterangepicker.js"></script>
 
 		<script>
 			angular
-				.module('ngBootstrap')
-				.controller('SampleCtrl', function($scope, $filter) {
-						$scope.dates2 = { startDate: moment('2013-09-20'), endDate: moment('2013-09-25') };
-						$scope.dates3 = { startDate: moment(), endDate: moment().add(1, 'day') };
+				.module('daterangepicker')
+				.controller('SampleCtrl', function($scope) {
+						$scope.dates2 = { startDate: moment(), endDate: moment().add(1, 'day') };
+						$scope.dates3 = { startDate: moment(), endDate: moment().add(7, 'day') };
 						$scope.dates4 = { startDate: moment().subtract(1, 'day'), endDate: moment().subtract(1, 'day') };
 						$scope.ranges = {
 							'Today': [moment(), moment()],

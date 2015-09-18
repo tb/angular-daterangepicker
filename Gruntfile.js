@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      files: ['src/ng-bs-daterangepicker.js', 'test/**/*.js']
+      files: ['src/angular-daterangepicker.js', 'test/**/*.js']
     },
 
     karma: {
@@ -24,9 +24,9 @@ module.exports = function(grunt) {
             'bower_components/angular/angular.js',
             'bower_components/angular-mocks/angular-mocks.js',
             'bower_components/bootstrap/dist/js/bootstrap.js',
-            'bower_components/momentjs/min/moment.min.js',
+            'bower_components/moment/min/moment.min.js',
             'bower_components/bootstrap-daterangepicker/daterangepicker.js',
-            'src/ng-bs-daterangepicker.js',
+            'src/angular-daterangepicker.js',
             'test/**/*.js'
           ]
         }
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/ng-bs-daterangepicker.min.js': ['src/ng-bs-daterangepicker.js']
+          'dist/ng-bs-daterangepicker.min.js': ['src/angular-daterangepicker.js']
         }
       }
     }
